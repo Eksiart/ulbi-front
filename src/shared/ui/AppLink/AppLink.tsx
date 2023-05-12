@@ -20,8 +20,7 @@ export const AppLink: FC<AppLinkProps> = (props) => {
         theme = AppLinkTheme.PRIMARY,
         ...otherProps
     } = props;
-    console.log(className);
-    console.log('-----------')
+
     return (
         <Link
             to={to}

@@ -7,6 +7,18 @@
 }
 
 .input {
+    background: transparent;
+    border: none;
+    outline: none;
     width: 100%;
     color: var(--primary-color);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.caretWrapper {
+    flex-grow: 1;
+    position: relative;
 }

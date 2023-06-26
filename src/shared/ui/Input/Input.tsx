@@ -40,17 +40,19 @@ export const Input = memo((props: LoginFromProps) => {
         <div className={classNames(cls.InputWrapper, {}, [className])}>
             {placeholder && (
                 <div className={cls.placeholder}>
-                    {`${placeholder} >`}
+                    {`${placeholder}>`}
                 </div>
             )}
-            <input
-                ref={ref}
-                type={type}
-                value={value}
-                onChange={onChangeHandler}
-                className={cls.input}
-                {...otherProps}
-            />
+            <div className={cls.caretWrapper}>
+                <input
+                    ref={ref}
+                    type={type}
+                    value={value}
+                    onChange={onChangeHandler}
+                    className={cls.input}
+                    {...otherProps}
+                />
+            </div>
         </div>
     );
 });

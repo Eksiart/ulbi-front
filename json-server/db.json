@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Ардан",
+    "lastname": "Дашинимаев",
+    "age": 21,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Irkutsk",
+    "username": "admin",
+    "avatar": "https://www.aphorism.ru/funny/pic/20210327204252-2402.jpg"
+  }
 }

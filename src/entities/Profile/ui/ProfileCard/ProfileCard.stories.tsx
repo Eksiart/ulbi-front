@@ -25,7 +25,7 @@ Primary.args = {
         first: 'asd',
         city: 'uu',
         currency: Currency.RUB,
-        avatar,
+        avatar: 'https://www.aphorism.ru/funny/pic/20210327204252-2402.jpg',
     },
 };
 

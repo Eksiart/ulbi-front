@@ -1,16 +1,17 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import React, {
     InputHTMLAttributes, memo, useEffect, useRef,
 } from 'react';
 import cls from './Input.module.scss';
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>
 
 interface LoginFromProps extends HTMLInputProps {
     className?: string;
-    value?: string;
+    value?: string | number;
     onChange?: (value: string) => void;
     autofocus?: boolean;
+    readonly?: boolean;
 }
 
 export const Input = memo((props: LoginFromProps) => {
@@ -21,14 +22,15 @@ export const Input = memo((props: LoginFromProps) => {
         type = 'text',
         placeholder,
         autofocus,
+        readonly,
         ...otherProps
     } = props;
 
-    const ref = useRef<HTMLInputElement>();
+    const ref = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
         if (autofocus) {
-            ref.current.focus();
+            ref.current?.focus();
         }
     }, [autofocus]);
 
@@ -36,8 +38,12 @@ export const Input = memo((props: LoginFromProps) => {
         onChange?.(e.target.value);
     };
 
+    const mods: Mods = {
+        [cls.readonly]: readonly,
+    };
+
     return (
-        <div className={classNames(cls.InputWrapper, {}, [className])}>
+        <div className={classNames(cls.InputWrapper, mods, [className])}>
             {placeholder && (
                 <div className={cls.placeholder}>
                     {`${placeholder}>`}
@@ -50,6 +56,7 @@ export const Input = memo((props: LoginFromProps) => {
                     value={value}
                     onChange={onChangeHandler}
                     className={cls.input}
+                    readOnly={readonly}
                     {...otherProps}
                 />
             </div>

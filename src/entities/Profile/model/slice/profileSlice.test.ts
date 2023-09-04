@@ -62,7 +62,7 @@ describe('profileSlice.test', () => {
             validateErrors: undefined,
         });
     });
-    test('test update profile service fullfiled', () => {
+    test('test update profile service fulfilled', () => {
         const state: DeepPartial<ProfileSchema> = {
             isLoading: true,
         };

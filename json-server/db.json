@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,18 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "3eyR3J8"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "arda",
+      "id": "IgYvJsS"
     }
   ],
   "users": [
@@ -118,14 +132,28 @@
       "avatar": "https://www.aphorism.ru/funny/pic/20210327204252-2402.jpg"
     }
   ],
-  "profile": {
-    "first": "Ардан",
-    "lastname": "Дашинимаев",
-    "age": 21,
-    "currency": "USD",
-    "country": "Georgia",
-    "city": "Irkutsk",
-    "username": "admin",
-    "avatar": "https://www.aphorism.ru/funny/pic/20210327204252-2402.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "АрданA",
+      "lastname": "Дашинимаев",
+      "age": 21,
+      "currency": "USD",
+      "country": "Georgia",
+      "city": "Irkutsk",
+      "username": "admin",
+      "avatar": "https://www.aphorism.ru/funny/pic/20210327204252-2402.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Art",
+      "lastname": "Shuter",
+      "age": 22,
+      "currency": "USD",
+      "country": "Belarus",
+      "city": "SPB",
+      "username": "admin123",
+      "avatar": "https://slimeobsidian.com/cdn/shop/products/IMG_8223_2048x.png?v=1674152865"
+    }
+  ]
 }
